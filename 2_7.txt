@@ -1,0 +1,50 @@
+/*Declare an abstract class Vehicle with an abstract method named numWheels().
+provide subclasses Car and Truck that each implements this method. 
+Create instance of these subclasses and demonstrate the use of this method*/
+
+abstract class Vehicle
+{
+	String name;
+	int wheels;
+	abstract int numWheels();
+}
+
+class Car extends Vehicle
+{
+	int numWheels()
+	{
+		return wheels;
+	}
+	
+	Car(String str,int no)
+	{
+		name = str;
+		wheels = no;
+	}
+}
+
+class Truck extends Vehicle
+{
+	int numWheels()
+	{
+		return wheels;
+	}
+	
+	Truck(String str,int no)
+	{
+		name = str;
+		wheels = no;
+	}
+}
+
+class AbstractVehicle
+{
+	public static void main(String[] ar)
+	{
+		Car bmw = new Car("BMW",4);
+		Truck volvo = new Truck("Volvo",12);
+		
+		System.out.println("BMW Have " + bmw.numWheels() + " Tyre");
+		System.out.println("Volvo Have " + volvo.numWheels() + " Tyre");
+	}	
+}

@@ -1,0 +1,34 @@
+/*Write program to create an array of company name and another array of price
+quoted by the company. Fetch the company name who has quoted the lowest
+amount.*/
+import java.util.Scanner;
+class comArray
+{
+	public static void main(String[] ar)
+	{
+		Scanner sc = new Scanner(System.in);
+		String[] comName = new String[5];
+		int[] comPrice = new int[5];
+		
+		for(int i = 0; i < 5; i++)
+		{
+			System.out.println("Enter Company Name:");
+			comName[i] = sc.next();
+			System.out.println("Enter Company Price:");
+			comPrice[i] = sc.nextInt();
+		}
+		
+		int min = 0;
+		
+		for(int i = 0; i < 5; i++)
+		{
+			if(comPrice[min] > comPrice[i])
+			{
+				min = i;
+			}
+		}
+		System.out.println("Minimum Price Company");
+		System.out.println("Company Name:" + comName[min]);
+		System.out.println("Company Price:" + comPrice[min]);
+	}	
+}

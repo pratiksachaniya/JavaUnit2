@@ -1,0 +1,51 @@
+/*Create class calculation with an abstract method area( ). Create Rectangle and
+Triangle subclasses of calculation and find area of rectangle and triangle.*/
+
+abstract class Calculation
+{
+	abstract double area();
+}
+
+class rectangle
+{
+	int length,width;
+	
+	double area()
+	{
+		return (length*width);
+	}
+	
+	rectangle(int l,int w)
+	{
+		length = l;
+		width = w;
+	}
+}
+
+class triangle
+{
+	int base,height;
+	
+	double area()
+	{
+		return ((base*height)/2d);
+	}
+	
+	triangle(int b,int h)
+	{
+		base = b;
+		height = h;
+	}
+}
+
+class AreaAbstract
+{
+	public static void main(String[] ar)
+	{
+		rectangle R = new rectangle(10,20);
+		triangle T = new triangle(23,5);
+		
+		System.out.println("Area Of Rectangle Is " + R.area());
+		System.out.println("Area Of Triangle Is " + T.area());
+	}
+}

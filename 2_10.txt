@@ -1,0 +1,67 @@
+/*The abstract Vegetable class has four subclasses named cabbage, carrot and
+potato. Write an application that demonstrates how to establish this class
+hierarchy. Declare one instance variable of type string that indicates the color of
+a vegetable. Create and display instances of these object. Override the toString()
+method of object to return a string with the name of the vegetable and its color.*/
+
+abstract class Vegetable
+{
+	String color;
+	String name;
+	public abstract String toString();
+}
+
+class Cabbage extends Vegetable
+{
+	public String toString()
+	{
+		return "Name : " + name + "\nColor: " + color;
+	}
+	Cabbage(String str,String clr)
+	{
+		name = str;
+		color = clr;
+	}
+}
+
+class Carrot extends Vegetable
+{
+	public String toString()
+	{
+		return "Name : " + name + "\nColor: " + color;
+	}
+	
+	Carrot(String str,String clr)
+	{
+		name = str;
+		color = clr;	
+	}
+}
+
+class Potato extends Vegetable
+{
+	public String toString()
+	{
+		return "Name : " + name + "\nColor: " + color;
+	}
+	
+	Potato(String str,String clr)
+	{
+		name = str;
+		color = clr;	
+	}
+}
+
+class AbVegetable
+{
+	public static void main(String[] ar)
+	{
+		Cabbage C = new Cabbage("Cabbage","Green");
+		Carrot  CR = new Carrot("Carrot","Orange");
+		Potato P = new Potato("Potato","Yellow");
+		
+		System.out.println(C.toString());
+		System.out.println(CR.toString());
+		System.out.println(P.toString());
+	}
+}
